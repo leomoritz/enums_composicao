@@ -1,9 +1,12 @@
 package entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Client {
-
+	
+	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
 	private String name;
 	private String email;
 	private Date birthday;
@@ -34,8 +37,8 @@ public class Client {
 		this.email = email;
 	}
 
-	public Date getBirthday() {
-		return birthday;
+	public String getBirthday() {
+		return sdf.format(birthday);
 	}
 
 	public void setBirthday(Date birthday) {

@@ -62,11 +62,10 @@ public class Order {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		sb.append("Order moment: " + getMoment() + "\n");
 		sb.append("Order status: " + getStatus() + "\n");
 		sb.append("Client: " + client.getName());
-		sb.append(" (" + sdf.format(client.getBirthday()) + ")");
+		sb.append(" (" + client.getBirthday() + ")");
 		sb.append(" - " + client.getEmail());
 		sb.append("\nOrder Items: \n");
 		for (OrderItem oi : items) {
